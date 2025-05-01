@@ -10,13 +10,13 @@ const Hero = () => {
       <video
         className="absolute video z-0"
         loop
-        content="cover"
+        muted
         playsInline
         autoPlay
-        poster="https://www.prodigyfootball.com.au/videos/homePoster.jpg"
+        poster="/hero.png"
       >
-        <source src="https://www.prodigyfootball.com.au/videos/homeVideo.mp4" />
-        your browser doesn't support this video extension
+        <source src="/hero_vid.mp4" type="video/mp4" />
+        Your browser doesn't support this video format.
       </video>
     </section>
   );
