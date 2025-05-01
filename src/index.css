@@ -33,9 +33,21 @@ body{
   box-sizing: border-box;
   height: auto;
 }
-
+.difference-text {
+  color: white;
+  mix-blend-mode: difference;
+}
 .parent-container{
   max-width: var(--max-width);
   width: 100%;
   margin-inline: auto;
+}
+.video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover;
+  object-position: bottom center !important;
 }
