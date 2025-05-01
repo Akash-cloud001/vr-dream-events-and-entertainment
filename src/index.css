@@ -3,5 +3,39 @@
 @tailwind utilities;
 
 :root{
-  
+ --white: '#FFF8F0';
+ --primary: '#92140C';
+ --secondary: '#623CEA';
+ --black: '#1E1E24';
+
+ --max-width: 1180px;
+}
+
+@font-face {
+  font-family: 'allenoire';
+  src: url('./assets/fonts/allenoire.ttf') format('truetype');
+  font-style: normal;
+}
+
+.ff-allen{
+  font-family: 'allenoire';
+}
+.ff-pop{
+    font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: var(--white);
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.parent-container{
+  max-width: var(--max-width);
+  width: 100%;
+  margin-inline: auto;
 }
