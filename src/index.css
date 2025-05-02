@@ -32,6 +32,7 @@ body{
   width: 100%;
   box-sizing: border-box;
   height: auto;
+  color: var(--black)
 }
 .difference-text {
   color: white;
