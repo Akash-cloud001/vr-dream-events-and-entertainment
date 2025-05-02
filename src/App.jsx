@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Service from './pages/Service';
 import Navbar from './components/Navbar';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<Services />} />
       <Route path="/services/:service_name" element={<Service />} />
+      <Route path="/contact-us" element={<Contact />} />
     </Routes>
     </main>
   )

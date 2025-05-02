@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import VrLogo from './svgs/VrLogo'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const navRef = useRef()
@@ -33,13 +34,25 @@ const Navbar = () => {
       <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm"></div>
       <VrLogo className="h-11 w-auto relative z-[1]" />
       <ul className="flex gap-10 items-center justify-center relative z-[1]">
-        <li className="text-black">Home</li>
-        <li className="text-black">About us</li>
-        <li className="text-black">Services</li>
+        <li className="text-black opacity-90">
+          <Link to={'/'} className='h-full w-full inline-block'>
+            Home
+          </Link>
+        </li>
+        {/* <li className="text-black">
+          <Link to={'/'} className='h-full w-full inline-block'>
+            About us
+          </Link>
+        </li> */}
+        <li className="text-black opacity-90">
+          <Link to={'/services'} className='h-full w-full inline-block'>
+            Services
+          </Link> 
+        </li>
         <li>
-          <button className="px-5 py-3 bg-primary text-white rounded-lg">
+          <Link to={'/contact-us'} className="inline-block px-5 py-3 bg-primary text-white rounded-lg">
             Contact Us
-          </button>
+          </Link>
         </li>
       </ul>
     </nav>
