@@ -1,22 +1,47 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import VrLogo from './svgs/VrLogo'
 
 const Navbar = () => {
-  return (
-    <nav className='h-24 w-full border border-white absolute top-0 left-0 z-[1000] flex items-center justify-between px-4 ff-allen overflow-hidden'>
-        <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm"></div>
+  const navRef = useRef()
+  const [isVisible, setIsVisible] = useState(false)
 
-        <VrLogo className='h-11 w-auto relative z-[1]' />
-        <ul className='flex gap-10 items-center justify-center relative z-[1]'>
-            <li className='difference-text'>Home</li>
-            <li className='difference-text'>About us</li>
-            <li className='difference-text'>Services</li>
-            <li>
-                <button className='px-5 py-3 bg-primary text-white rounded-lg'>
-                    Contact Us
-                </button>
-            </li>
-        </ul>
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if ((window.scrollY + 200) >= window.innerHeight) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    // Check scroll position on mount
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  return (
+    <nav
+      ref={navRef}
+      className={`h-24 w-full fixed top-0 left-0 z-[1000] flex items-center justify-between px-4 ff-allen overflow-hidden transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none '
+      }`}
+    >
+      <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm"></div>
+      <VrLogo className="h-11 w-auto relative z-[1]" />
+      <ul className="flex gap-10 items-center justify-center relative z-[1]">
+        <li className="text-black">Home</li>
+        <li className="text-black">About us</li>
+        <li className="text-black">Services</li>
+        <li>
+          <button className="px-5 py-3 bg-primary text-white rounded-lg">
+            Contact Us
+          </button>
+        </li>
+      </ul>
     </nav>
   )
 }

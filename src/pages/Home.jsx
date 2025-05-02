@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <section className='home-page'>
         <Hero />
+        <section className="h-screen w-full"></section>
     </section>
   )
 }
