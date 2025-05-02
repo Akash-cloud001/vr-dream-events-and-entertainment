@@ -1,5 +1,9 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import ProcessDesk from '../components/svgs/ProcessDesk'
+import IdeateGraphic from '../components/svgs/IdeateGraphic'
+import PlanGraphic from '../components/svgs/PlanGraphic'
+import ExecuteGraphic from '../components/svgs/ExecuteGraphic'
 
 const Home = () => {
   return (
@@ -23,7 +27,33 @@ const Home = () => {
                 With a strong track record of successful projects and a team of professional event planners, we don’t just plan events — we build relationships, spark emotions, and deliver results that matter.
               </p>
             </div>
+          </article>
 
+
+          <article className='mt-20'>
+            <p className='text-2xl text-center ff-pop font-semibold text-black/90'>
+                Our Process
+            </p>
+            <figure className='mt-6 xl:mt-9'>
+               <ProcessDesk className='hidden md:block h-[320px] w-full' />
+               <aside className='flex flex-col md:flex-row items-center justify-center gap-8 md:mt-4 lg:mt-8'>
+                <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
+                  <IdeateGraphic className='block md:hidden' />
+                  <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Ideate</p>
+                  <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>We dive deep into your vision, brainstorm bold ideas, and craft creative concepts that align perfectly with your brand and goals.</p>
+                </div>
+                <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
+                  <PlanGraphic className='block md:hidden'/>
+                  <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Plan</p>
+                  <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>Our expert team handles every detail — timelines, budgets, and logistics — ensuring a stress-free and strategic approach to execution.</p>
+                </div>
+                <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
+                  <ExecuteGraphic className='block md:hidden'/>
+                  <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Execute</p>
+                  <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>From setup to showtime, we deliver flawless, on-ground experiences that leave lasting impressions and exceed expectations every single time.</p>
+                </div>
+               </aside>
+            </figure>
           </article>
         </section>
     </section>
