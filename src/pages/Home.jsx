@@ -78,7 +78,7 @@ const Home = () => {
           <article className="mt-20 mask-grad ">
             <header className='text-xl  md:text-[40px] ff-allen text-black/80 text-center py-2'>
               Bringing World-Class Events to Every Corner of <br />
-              <span className='text-4xl md:text-6xl text-primary sm:mt-4 inline-block'> India</span>
+              <span className='text-4xl md:text-6xl text-primary mt-4 sm:mt-4 inline-block'> India</span>
             </header>
             <img src="/india.svg" className='h-full w-full mt-8 ' alt="" />
           </article>
