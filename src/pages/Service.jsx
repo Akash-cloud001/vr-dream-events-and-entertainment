@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { useParams } from 'react-router-dom'
 const Service = () => {
+  const {service_name} = useParams();
   return (
-    <div>Service</div>
+    <div className='text-black'>
+      {service_name}
+    </div>
   )
 }
 

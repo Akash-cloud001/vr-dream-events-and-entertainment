@@ -26,6 +26,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.max-w-1180{
+  max-width: var(--max-width);
+}
 
 body{
   background: var(--white);
@@ -51,4 +54,9 @@ body{
   z-index: 0;
   object-fit: cover;
   object-position: bottom center !important;
+}
+.service-card:hover > img{
+  scale: 1.02;
+  transition: all linear 200ms;
+  transform-origin: center center;
 }

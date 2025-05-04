@@ -5,6 +5,7 @@ import IdeateGraphic from '../components/svgs/IdeateGraphic'
 import PlanGraphic from '../components/svgs/PlanGraphic'
 import ExecuteGraphic from '../components/svgs/ExecuteGraphic'
 import ChevronIcon from '../components/svgs/ChevronIcon'
+import { Link } from 'react-router-dom'
 const services = [
   {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
   {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
@@ -17,7 +18,7 @@ const Home = () => {
   return (
     <section className='home-page'>
         <Hero />
-        <section className="h-screen w-full pt-[140px] px-4">
+        <section className="h-screen w-full pt-[140px] px-4 max-w-1180 mx-auto">
           <header className='text-4xl md:text-5xl ff-allen text-center text-primary'>
            What we DO. We DO it best
           </header>
@@ -38,7 +39,7 @@ const Home = () => {
           </article>
 
 
-          <article className='mt-20'>
+          <article className='mt-20 '>
             <p className='text-2xl text-center ff-pop font-semibold text-black/90'>
                 Our Process
             </p>
@@ -64,24 +65,27 @@ const Home = () => {
             </figure>
           </article>
 
-          <article className="mt-20 px-4">
+          <article className="mt-20 px-4 ">
             <header className='text-4xl md:text-5xl ff-allen text-center text-primary'>
-            What we DO. We DO it best
+            Our Services
             </header>
 
-            <section className="w-full grid grid-cols-12 gap-8">
+            <section className="w-full grid grid-cols-12 gap-8 mt-8">
               {services.map((service, map)=>(
-                <div className='col-span-12 rounded-3xl overflow-hidden relative h-[400px] w-auto border'>
-                  <img className='absolute block h-full w-full object-cover' src={service?.imgUrl} alt={service?.name} />
-                  <div className='bg-black/40 rounded-3xl h-20 px-4 sm:px-6 flex items-center justify-between relative z-[1] top-full'>
+                <Link to={service.link} className='service-card col-span-12 md:col-span-6 lg:col-span-4 rounded-3xl overflow-hidden relative h-[400px] w-auto border'>
+                  <img className='absolute block h-full w-full object-cover object-top' src={service?.imgUrl} alt={service?.name} />
+                  <div className='bg-black/40 text-white ff-allen text-2xl capitalize backdrop-blur-sm rounded-3xl h-20 px-4 sm:px-6 flex items-center justify-between relative z-[1] top-[calc(100%-80px)]'>
                     <p>{service.name}</p> <ChevronIcon />
                   </div>
-                </div>
+                </Link>
               ))}
-              
             </section>
+              <Link to={'/services'} className='block border border-primary rounded-lg text-primary ff-allen text-lg w-max px-5 py-3 mt-8 mx-auto'>
+                More Services
+              </Link>
 
           </article>
+
         </section>
     </section>
   )
