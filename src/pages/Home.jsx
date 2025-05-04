@@ -4,7 +4,15 @@ import ProcessDesk from '../components/svgs/ProcessDesk'
 import IdeateGraphic from '../components/svgs/IdeateGraphic'
 import PlanGraphic from '../components/svgs/PlanGraphic'
 import ExecuteGraphic from '../components/svgs/ExecuteGraphic'
-
+import ChevronIcon from '../components/svgs/ChevronIcon'
+const services = [
+  {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
+  {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
+  {name:'exhibition', link: '/service/exhibition', imgUrl: '/images/services/exhibition.png'},
+  {name:'Board Branding', link: '/service/board-branding', imgUrl: '/images/services/board-boarding.png'},
+  {name:'Road Show', link: '/service/road-show', imgUrl: '/images/services/road-show.png'},
+  {name:'artist management', link: '/service/artist-management', imgUrl: '/images/services/artist-management.png'}
+]
 const Home = () => {
   return (
     <section className='home-page'>
@@ -54,6 +62,25 @@ const Home = () => {
                 </div>
                </aside>
             </figure>
+          </article>
+
+          <article className="mt-20 px-4">
+            <header className='text-4xl md:text-5xl ff-allen text-center text-primary'>
+            What we DO. We DO it best
+            </header>
+
+            <section className="w-full grid grid-cols-12 gap-8">
+              {services.map((service, map)=>(
+                <div className='col-span-12 rounded-3xl overflow-hidden relative h-[400px] w-auto border'>
+                  <img className='absolute block h-full w-full object-cover' src={service?.imgUrl} alt={service?.name} />
+                  <div className='bg-black/40 rounded-3xl h-20 px-4 sm:px-6 flex items-center justify-between relative z-[1] top-full'>
+                    <p>{service.name}</p> <ChevronIcon />
+                  </div>
+                </div>
+              ))}
+              
+            </section>
+
           </article>
         </section>
     </section>
