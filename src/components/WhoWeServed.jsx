@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import Carousel from './Carousel';
+import Header from './ui/Header';
+import Carousel from './ui/Carousel';
 
 const WhoWeServed = () => {
   return (
@@ -14,7 +14,7 @@ const WhoWeServed = () => {
             '/images/brands/development-bank-of-singapore.png',
             '/images/brands/dhl.png',
             '/images/brands/finolex.png',
-            '/images/brands/Fresenius_Kabi_Logo.png',
+            '/images/brands/kenstar.png',
           ]}
         />
       </figure>
@@ -23,8 +23,8 @@ const WhoWeServed = () => {
           direction='reverse'
           images={[
             '/images/brands/hdfc-bank-logo.png',
-            '/images/brands/Ingenico-Logo.wine.png',
-            '/images/brands/Max_India_Logo.svg.png',
+            '/images/brands/gem-logo.png',
+            '/images/brands/hil.png',
             '/images/brands/prismlogo.png',
             '/images/brands/spark.png',
           ]}

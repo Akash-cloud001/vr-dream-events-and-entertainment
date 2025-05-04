@@ -4,12 +4,10 @@ import ProcessDesk from '../components/svgs/ProcessDesk'
 import IdeateGraphic from '../components/svgs/IdeateGraphic'
 import PlanGraphic from '../components/svgs/PlanGraphic'
 import ExecuteGraphic from '../components/svgs/ExecuteGraphic'
-import ChevronIcon from '../components/svgs/ChevronIcon'
 import { Link } from 'react-router-dom'
 import Header from '../components/ui/Header'
 import ServiceCard from '../components/ui/ServiceCard'
-import Carousel from '../components/ui/Carousel'
-import WhoWeServed from '../components/ui/WhoWeServed'
+import WhoWeServed from '../components/WhoWeServed'
 const services = [
   {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
   {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
