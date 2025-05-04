@@ -60,3 +60,82 @@ body{
   transition: all linear 200ms;
   transform-origin: center center;
 }
+
+
+.scroller{
+  max-width: 1180px;
+  width: 100%;
+  transition: width ease 100ms;
+}
+/* @media screen and (min-width:380px) {
+  .scroller{
+    max-width: 340px;
+  }
+}
+@media screen and (min-width:576px) {
+  .scroller{
+    max-width: 550px;
+  }
+}
+@media screen and (min-width: 768px){
+  .scroller{
+    max-width: 740px;
+  }
+}
+@media screen and (min-width:900px) {
+  .scroller{
+    max-width: 400px;
+  }
+}
+@media screen and (min-width:1000px) {
+  .scroller{
+    max-width: 500px;
+  }
+}
+@media screen and (min-width:1150px) {
+  .scroller{
+    max-width: 700px;
+  }
+}
+@media screen and (min-width:1300px) {
+  .scroller{
+    max-width: 700px;
+  }
+} */
+
+.scroller[data-animated="true"]{
+  overflow: hidden;
+}
+.scoller__inner{
+  padding-block: 1rem;
+  /* flex-wrap: wrap; */
+  display: flex;
+  gap: 3rem;
+}
+.scroller[data-animated="true"] .scoller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  }
+  
+.scroller[data-animated="true"][data-direction="forward"] .scoller__inner{
+animation: scroll 300s linear infinite;
+}
+
+.scroller[data-animated="true"][data-direction="reverse"] .scoller__inner{
+animation: scroll 300s linear infinite reverse;
+}
+.mask-grad {
+  --webkit-mask: linear-gradient(90deg, transparent, white 10%, white 70%, transparent);
+  mask: linear-gradient(90deg, transparent, white 10%, white 70%, transparent);
+}
+
+@keyframes scroll {
+  to{
+    transform: translate(calc(-50% - 0.125rem));
+  }
+}
+@keyframes scrollRev {
+  to{
+    transform: translate(calc(50% - 0.125rem));
+  }
+}
