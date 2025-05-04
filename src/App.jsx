@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Service from './pages/Service';
 import Navbar from './components/Navbar';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -15,9 +16,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/service/:service_name" element={<Service />} />
+      <Route path="/service/:service_name/:id" element={<Service />} />
       <Route path="/contact-us" element={<Contact />} />
     </Routes>
+    <Footer />
+
     </main>
   )
 }

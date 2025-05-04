@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom'
 import Header from '../components/ui/Header'
 import ServiceCard from '../components/ui/ServiceCard'
 import WhoWeServed from '../components/WhoWeServed'
-import Footer from '../components/Footer'
-const services = [
-  {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
-  {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
-  {name:'exhibition', link: '/service/exhibition', imgUrl: '/images/services/exhibition.png'},
-  {name:'Board Branding', link: '/service/board-branding', imgUrl: '/images/services/board-boarding.png'},
-  {name:'Road Show', link: '/service/road-show', imgUrl: '/images/services/road-show.png'},
-  {name:'artist management', link: '/service/artist-management', imgUrl: '/images/services/artist-management.png'}
-]
+import { services } from '../services'
+// const services = [
+//   {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
+//   {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
+//   {name:'exhibition', link: '/service/exhibition', imgUrl: '/images/services/exhibition.png'},
+//   {name:'Board Branding', link: '/service/board-branding', imgUrl: '/images/services/board-boarding.png'},
+//   {name:'Road Show', link: '/service/road-show', imgUrl: '/images/services/road-show.png'},
+//   {name:'artist management', link: '/service/artist-management', imgUrl: '/images/services/artist-management.png'}
+// ]
 const Home = () => {
   const aboutRef = useRef()
   const handleScroll = ()=>{
@@ -97,11 +97,8 @@ const Home = () => {
               </Link>
 
           </article>
-
-
           <WhoWeServed/>
 
-          <Footer />
         </section>
     </section>
   )
