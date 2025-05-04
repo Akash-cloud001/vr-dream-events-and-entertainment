@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Header from '../components/ui/Header'
 import ServiceCard from '../components/ui/ServiceCard'
 import WhoWeServed from '../components/WhoWeServed'
+import Footer from '../components/Footer'
 const services = [
   {name:'Product Launch', link: '/service/product-launch', imgUrl: '/images/services/product-launch.png'},
   {name:'Carnival Day', link: '/service/carnival-day', imgUrl: '/images/services/carnival.png'},
@@ -69,8 +70,8 @@ const Home = () => {
             <Header name={'Our Services'} />
 
             <section className="w-full grid grid-cols-12 gap-8 mt-8">
-              {services.map((service, map)=>(
-               <ServiceCard service={service} />
+              {services.map((service, idx)=>(
+               <ServiceCard service={service} key={idx} />
               ))}
             </section>
               <Link to={'/services'} className='block border border-primary rounded-lg text-primary ff-allen text-lg w-max px-5 py-3 mt-8 mx-auto'>
@@ -81,6 +82,8 @@ const Home = () => {
 
 
           <WhoWeServed/>
+
+          <Footer />
         </section>
     </section>
   )
