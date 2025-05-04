@@ -13,7 +13,7 @@ export default {
         black: '#1E1E24',
       },
       screens: {
-        'xs': '400px',     // Extra small phones
+        'xs': '370px',     // Extra small phones
         'sm': '640px',     // Small devices (default Tailwind)
         'md': '768px',     // Medium devices (default)
         'lg': '1024px',    // Large devices (default)
