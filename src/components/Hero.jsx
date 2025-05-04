@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = ({handleScroll}) => {
   return (
     <section className="hero-container h-dvh w-full bg-black ff-allen grid place-content-center relative overflow-hidden">
-      <div className="difference-text text-2xl xs:text-3xl sm:text-4xl  md:text-6xl xl:text-7xl flex flex-col items-center justify-center gap-4 md:gap-8 relative z-[1]">
+      <div className="difference-text text-2xl xs:text-[32px] sm:text-4xl  md:text-6xl xl:text-7xl flex flex-col items-center justify-center gap-4 md:gap-8 relative z-[1]">
         <p>EXPERT PLANNING</p>
         <p>SEAMLESS EXECUTION</p>
       </div>

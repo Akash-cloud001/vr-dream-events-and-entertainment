@@ -40,22 +40,22 @@ const Footer = () => {
             </div>
             <ul className='absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center pb-6'>
                 <li>
-                    <a href="">
+                    <a href="https://wa.me/9899125551"  target='_blank'>
                         <img src='/images/socials/whatsapp.svg' />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://www.facebook.com/vrdreamevents" target='_blank'>
                         <img src='/images/socials/facebook.svg' />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://www.instagram.com/vr_dream_events?igsh=NDJodzdubnhiYWE3&utm_source=qr" target='_blank'>
                         <img src='/images/socials/instagram.svg' />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://www.linkedin.com/company/vr-dream-events-and-entertainments/" target='_blank'>
                         <img src='/images/socials/linkedin.svg' />
                     </a>
                 </li>

@@ -57,17 +57,17 @@ const Home = () => {
                <ProcessDesk className='hidden md:block h-[320px] w-full' />
                <aside className='flex flex-col md:flex-row items-center justify-center gap-8 md:mt-4 lg:mt-8'>
                 <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
-                  <IdeateGraphic className='block md:hidden' />
+                  <IdeateGraphic className='block h-[280px] w-auto md:hidden' /> 
                   <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Ideate</p>
                   <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>We dive deep into your vision, brainstorm bold ideas, and craft creative concepts that align perfectly with your brand and goals.</p>
                 </div>
                 <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
-                  <PlanGraphic className='block md:hidden'/>
+                  <PlanGraphic className='block h-[280px] w-auto md:hidden'/>
                   <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Plan</p>
                   <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>Our expert team handles every detail — timelines, budgets, and logistics — ensuring a stress-free and strategic approach to execution.</p>
                 </div>
                 <div className='flex flex-col text-center w-[320px] md:w-[282px]'>
-                  <ExecuteGraphic className='block md:hidden'/>
+                  <ExecuteGraphic className='block h-[280px] w-auto md:hidden'/>
                   <p className='ff-allen text-black/90 text-2xl mt-6 md:mt-0'>Execute</p>
                   <p className='mt-2 md:mt-4 text-base text-black/70 font-light'>From setup to showtime, we deliver flawless, on-ground experiences that leave lasting impressions and exceed expectations every single time.</p>
                 </div>
@@ -76,11 +76,11 @@ const Home = () => {
           </article>
 
           <article className="mt-20 mask-grad ">
-            <header className='text-xl  md:text-[40px] ff-allen text-black/80 text-center'>
+            <header className='text-xl  md:text-[40px] ff-allen text-black/80 text-center py-2'>
               Bringing World-Class Events to Every Corner of <br />
-              <span className='text-4xl md:text-6xl text-primary'> India</span>
+              <span className='text-4xl md:text-6xl text-primary sm:mt-4 inline-block'> India</span>
             </header>
-            <img src="/india.svg" className='h-full w-full ' alt="" />
+            <img src="/india.svg" className='h-full w-full mt-8 ' alt="" />
           </article>
 
 
