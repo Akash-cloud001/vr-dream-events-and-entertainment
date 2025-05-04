@@ -12,7 +12,6 @@ const Carousel = ({images, classes, size=100, direction='forward'}) => {
 
         function addAnimation(){
             let imagesLen =  images?.length;
-            console.log(imagesLen)
             scrollers.current.forEach(element => {
                 element.setAttribute("data-animated", true)
 

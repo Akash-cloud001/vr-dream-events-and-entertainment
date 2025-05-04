@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Hero from '../components/Hero'
 import ProcessDesk from '../components/svgs/ProcessDesk'
 import IdeateGraphic from '../components/svgs/IdeateGraphic'
@@ -18,10 +18,19 @@ const services = [
   {name:'artist management', link: '/service/artist-management', imgUrl: '/images/services/artist-management.png'}
 ]
 const Home = () => {
+  const aboutRef = useRef()
+  const handleScroll = ()=>{
+    if(aboutRef.current){
+      window.scrollTo({
+        top: aboutRef.current.offsetTop,
+        behavior: 'smooth' // optional, for smooth scrolling
+      });
+    }
+  }
   return (
     <section className='home-page'>
-        <Hero />
-        <section className="h-screen w-full pt-[140px] px-4 max-w-1180 mx-auto">
+        <Hero handleScroll={handleScroll} />
+        <section ref={aboutRef} className="h-screen w-full pt-[140px] px-4 max-w-1180 mx-auto">
           <Header name={'What we DO. We DO it best'} />
           <article className='flex flex-col md:flex-row items-center justify-center gap-16 lg:gap-12 xl:gap-16 pt-11'>
             <figure className='relative h-[350px] w-[300px] xs:w-[320px] '>
