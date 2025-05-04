@@ -5,10 +5,10 @@ const Footer = () => {
    
   return (
     <footer className='px-0 sm:px-4 pb-2 mt-20 relative'>
-        <section className="bg-primary w-full h-auto rounded-[20px] px-4 sm:px-8 lg:px-11 grid grid-cols-12 gap-8 pt-8 pb-20 relative">
-            <div className='w-full col-span-12 md:col-span-6'>
+        <section className="bg-primary w-full h-auto rounded-[20px] px-4 sm:px-8 lg:px-11 flex flex-col md:flex-row gap-8 pt-8 pb-20 relative">
+            <div className='w-full '>
                 <VrLogo fillRect='#92140C' fillText='#FFF8F0' className='h-12 sm:h-14' />
-                <ul className='mt-11 pl-2 flex flex-col gap-5'>
+                <ul className='mt-11 pl-2 flex flex-col gap-4 sm:gap-5'>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/sms.svg" alt="sms" />
                         <a href="mailto:contact@vrdreamevents.in" target='_blank' className='text-white/90 text-sm'>contact@vrdreamevents.in</a>
@@ -28,7 +28,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div style={{ position: 'relative' }} className='rounded-lg overflow-hidden col-span-12 md:col-span-6 '>
+            <div style={{ position: 'relative' }} className='hidden sm:block rounded-lg overflow-hidden w-full'>
                 <div style={{ position: 'relative', height: 300, overflow: 'hidden' }} >
                     <iframe 
                     style={{ position: 'absolute', top: 0, left: 0, width:'100%', height: '100%', border: 20, }} 

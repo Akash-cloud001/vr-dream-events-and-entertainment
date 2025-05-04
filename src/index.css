@@ -67,42 +67,6 @@ body{
   width: 100%;
   transition: width ease 100ms;
 }
-/* @media screen and (min-width:380px) {
-  .scroller{
-    max-width: 340px;
-  }
-}
-@media screen and (min-width:576px) {
-  .scroller{
-    max-width: 550px;
-  }
-}
-@media screen and (min-width: 768px){
-  .scroller{
-    max-width: 740px;
-  }
-}
-@media screen and (min-width:900px) {
-  .scroller{
-    max-width: 400px;
-  }
-}
-@media screen and (min-width:1000px) {
-  .scroller{
-    max-width: 500px;
-  }
-}
-@media screen and (min-width:1150px) {
-  .scroller{
-    max-width: 700px;
-  }
-}
-@media screen and (min-width:1300px) {
-  .scroller{
-    max-width: 700px;
-  }
-} */
-
 .scroller[data-animated="true"]{
   overflow: hidden;
 }

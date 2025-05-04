@@ -4,9 +4,9 @@ import ChevronIcon from '../svgs/ChevronIcon';
 
 const ServiceCard = ({ service }) => {
   return (
-    <Link to={service.link} className='service-card col-span-12 md:col-span-6 lg:col-span-4 rounded-3xl overflow-hidden relative h-[400px] w-auto border'>
+    <Link to={service.link} className='service-card col-span-10 xs:col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-4 rounded-3xl overflow-hidden relative h-[400px] border'>
       <img
-        className='absolute block h-full w-full object-cover object-top'
+        className='absolute block h-full w-full object-cover object-top '
         src={service?.imgUrl}
         alt={service?.name}
       />

@@ -75,7 +75,16 @@ const Home = () => {
             </figure>
           </article>
 
-          <article className="mt-20 px-4 ">
+          <article className="mt-20 mask-grad ">
+            <header className='text-xl  md:text-[40px] ff-allen text-black/80 text-center'>
+              Bringing World-Class Events to Every Corner of <br />
+              <span className='text-4xl md:text-6xl text-primary'> India</span>
+            </header>
+            <img src="/india.svg" className='h-full w-full ' alt="" />
+          </article>
+
+
+          <article className="mt-20">
             <Header name={'Our Services'} />
 
             <section className="w-full grid grid-cols-12 gap-8 mt-8">
