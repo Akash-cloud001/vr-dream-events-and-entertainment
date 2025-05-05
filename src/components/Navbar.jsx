@@ -84,7 +84,7 @@ const Navbar = () => {
       />
       {/* Sidebar for mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white z-[1500] transform transition-transform duration-300 ease-in-out  shadow-lg ${
+        className={`fixed top-0 right-0 h-max w-64 bg-white z-[1500] transform transition-transform duration-300 ease-in-out  shadow-lg rounded-tl-xl rounded-bl-xl ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >
@@ -97,16 +97,15 @@ const Navbar = () => {
             &times;
           </button>
           <ul className="flex flex-col gap-4">
-            <li className="cursor-pointer pb-4 border-b border-black/20" onClick={toggleSidebar}>Home</li>
-            <li className="cursor-pointer pb-4 border-b border-black/20" onClick={toggleSidebar}>About us</li>
-            <li className="cursor-pointer pb-4 " onClick={toggleSidebar}>Services</li>
+            <li className="cursor-pointer pb-4 border-b border-black/20" onClick={toggleSidebar}><Link to={'/'}>Home</Link></li>
+            <li className="cursor-pointer pb-4 " onClick={toggleSidebar}><Link to={'/services'}>Services</Link></li>
             <li>
-              <button
-                className="px-5 py-3 bg-primary text-white rounded-lg w-full"
+              <a href="https://wa.me/9899125551"
+                className="block px-5 py-3 bg-primary text-white rounded-lg w-full text-center"
                 onClick={toggleSidebar}
               >
                 Contact Us
-              </button>
+              </a>
             </li>
           </ul>
         </div>
