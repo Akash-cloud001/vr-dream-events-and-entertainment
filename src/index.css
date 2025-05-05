@@ -82,11 +82,11 @@ body{
   }
   
 .scroller[data-animated="true"][data-direction="forward"] .scoller__inner{
-animation: scroll 300s linear infinite;
+animation: scroll 600s linear infinite;
 }
 
 .scroller[data-animated="true"][data-direction="reverse"] .scoller__inner{
-animation: scroll 300s linear infinite reverse;
+animation: scroll 600s linear infinite reverse;
 }
 .mask-grad {
   --webkit-mask: linear-gradient(90deg, transparent, white 10%, white 70%, transparent);

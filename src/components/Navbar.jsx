@@ -39,15 +39,17 @@ const Navbar = () => {
         <VrLogo className="h-11 w-auto relative z-[1]" />
         {/* Desktop nav links */}
         <ul className="hidden md:flex gap-10 items-center justify-center relative z-[1]">
-          <li className="text-black/80">Home</li>
+          <li className="text-black/80">
+            <Link to={'/'}>Home</Link>
+          </li>
           {/* <li className="text-black/80">About us</li> */}
           <li className="text-black/80">
             <Link to={'/services'}>Services</Link>
           </li>
           <li>
-            <button className="px-5 py-3 bg-primary text-white rounded-lg">
+            <a href="https://wa.me/9899125551"  className="block px-5 py-3 bg-primary text-white rounded-lg">
               Contact Us
-            </button>
+            </a>
           </li>
         </ul>
         {/* Hamburger button for mobile */}
