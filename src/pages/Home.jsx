@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <section className='home-page'>
         <Hero handleScroll={handleScroll} />
-        <section ref={aboutRef} className="h-screen w-full pt-[140px] px-4 max-w-1180 mx-auto">
+        <section ref={aboutRef} className="h-auto w-full pt-[140px] px-4 max-w-1180 mx-auto">
           <Header name={'What we DO. We DO it best'} />
           <article className='flex flex-col md:flex-row items-center justify-center gap-16 lg:gap-12 xl:gap-16 pt-11'>
             <figure className='relative h-[350px] w-[300px] xs:w-[320px] '>
@@ -88,9 +88,10 @@ const Home = () => {
             <Header name={'Our Services'} />
 
             <section className="w-full grid grid-cols-12 gap-8 mt-8">
-              {services.map((service, idx)=>(
-               <ServiceCard service={service} key={idx} />
-              ))}
+              {services.map((service, idx)=>{
+                if(idx>=6) return
+               return <ServiceCard service={service} key={idx} />
+              })}
             </section>
               <Link to={'/services'} className='block border border-primary rounded-lg text-primary ff-allen text-lg w-max px-5 py-3 mt-8 mx-auto'>
                 More Services
@@ -98,7 +99,6 @@ const Home = () => {
 
           </article>
           <WhoWeServed/>
-
         </section>
     </section>
   )
