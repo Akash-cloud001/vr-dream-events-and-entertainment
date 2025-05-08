@@ -77,7 +77,7 @@ const Home = () => {
           </article>
 
 
-          <article className="mt-20">
+          <article className="mt-32">
             <Header name={'Our Services'} />
 
             <section className="w-full grid grid-cols-12 gap-8 mt-8">

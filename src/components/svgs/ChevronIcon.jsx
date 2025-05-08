@@ -6,6 +6,7 @@ const ChevronIcon = (props) => (
     width="11"
     height="18"
     fill="none"
+    {...props}
     viewBox="0 0 11 18"
   >
     <path
