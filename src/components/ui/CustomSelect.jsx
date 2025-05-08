@@ -67,7 +67,7 @@ const CustomSelect = ({ options, onSelect, placeholder = "Select a service" }) =
               role="option"
               aria-selected={selected && selected.id === option.id}
             >
-              <Link to={`${option.link}/${option.id}`} className="block truncate">{option.name}</Link>
+              <Link to={`${option.link}/${option.id}`} className="capitalize block truncate">{option.name}</Link>
             </li>
           ))}
         </ul>
