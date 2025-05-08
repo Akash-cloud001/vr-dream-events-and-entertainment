@@ -1,12 +1,15 @@
 import React, { useState, useRef, useLayoutEffect } from 'react'
 import VrLogo from './svgs/VrLogo'
 import { Link } from 'react-router-dom'
-
+import Modal from './ui/Modal'
+import MessageGraphic from './svgs/MessageGraphic'
+import CustomSelect from './ui/CustomSelect'
+import { services } from '../services'
 const Navbar = () => {
   const navRef = useRef()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
   useLayoutEffect(() => {
     const handleScroll = () => {
       if ((window.scrollY) >= window.innerHeight) {
@@ -28,12 +31,15 @@ const Navbar = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
   }
-
+  const handleContact = ()=>{
+    toggleSidebar();
+    setIsModalOpen(true);
+  }
   return (
     <>
       <nav
         ref={navRef}
-        className={`h-24 w-full fixed top-0 left-0 z-[1000] flex items-center justify-between px-4 ff-allen overflow-hidden ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none '}`}
+        className={`h-24 w-full fixed top-0 left-0 z-[1000] flex items-center justify-between px-4 ff-allen  ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none '}`}
       >
         <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm"></div>
         <VrLogo className="h-11 w-auto relative z-[1]" />
@@ -46,10 +52,16 @@ const Navbar = () => {
           <li className="text-black/80">
             <Link to={'/services'}>Services</Link>
           </li>
+          <li className="text-black/80">
+            <CustomSelect options={services} />
+          </li>
           <li>
-            <a href="https://wa.me/9899125551"  className="block px-5 py-3 bg-primary text-white rounded-lg">
-              Contact Us
-            </a>
+          <button 
+                className="block px-5 py-3 bg-primary text-white rounded-lg w-full text-center"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Contact Us
+              </button>
           </li>
         </ul>
         {/* Hamburger button for mobile */}
@@ -84,7 +96,7 @@ const Navbar = () => {
       />
       {/* Sidebar for mobile */}
       <div
-        className={`fixed top-0 right-0 h-max w-64 bg-white z-[1500] transform transition-transform duration-300 ease-in-out  shadow-lg rounded-tl-xl rounded-bl-xl ${
+        className={`fixed top-0 right-0 h-dvh w-64 bg-white z-[1500] transform transition-transform duration-300 ease-in-out  shadow-lg rounded-tl-xl rounded-bl-xl ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >
@@ -98,18 +110,41 @@ const Navbar = () => {
           </button>
           <ul className="flex flex-col gap-4">
             <li className="cursor-pointer pb-4 border-b border-black/20" onClick={toggleSidebar}><Link to={'/'}>Home</Link></li>
-            <li className="cursor-pointer pb-4 " onClick={toggleSidebar}><Link to={'/services'}>Services</Link></li>
-            <li>
-              <a href="https://wa.me/9899125551"
+            <li className="cursor-pointer pb-4 border-b border-black/20" onClick={toggleSidebar}><Link to={'/services'}>Services</Link></li>
+            <li className="cursor-pointer pb-4 "><CustomSelect options={services} /></li>
+            <li className='absolute bottom-8 left-1/2 -translate-x-1/2 w-max'>
+              <button 
                 className="block px-5 py-3 bg-primary text-white rounded-lg w-full text-center"
-                onClick={toggleSidebar}
+                onClick={handleContact}
               >
                 Contact Us
-              </a>
+              </button>
             </li>
           </ul>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <section className='flex flex-col items-center gap-4 w-full'>
+          <MessageGraphic className='h-44 w-44'/>
+          <ul className='flex flex-col gap-4 mt-4 w-full'>
+            <li>
+                <a href="https://wa.me/9899125551" target='_blank'
+                  className="block px-5 py-3 bg-white border border-primary text-primary hover:bg-primary hover:text-white duration-200 rounded-lg w-full text-center"
+                >
+                  Whats App
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@vrdreamevents.in" target='_blank'
+                  className="block px-5 py-3 bg-white border border-primary text-primary hover:bg-primary hover:text-white duration-200 rounded-lg w-full text-center"
+                >
+                  Mail Us
+                </a>
+            </li>
+          </ul>
+
+        </section>
+      </Modal>
     </>
   )
 }
