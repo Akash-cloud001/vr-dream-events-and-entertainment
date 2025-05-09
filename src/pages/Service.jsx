@@ -30,9 +30,9 @@ const Service = () => {
   return (
     <section className='home-page'>
       <section className="h-dvh w-full bg-black ff-allen grid place-content-center overflow-hidden relative">
-        <img src={service?.imgUrl} alt={service?.name} className='h-full w-full absolute object-cover object-top' />ß
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-white text-2xl xs:text-[32px] sm:text-4xl  md:text-5xl xl:text-6xl flex flex-col items-center justify-center gap-4 md:gap-8 z-[1]  backdrop-blur-md px-9 pt-8 pb-6 rounded-t-3xl">
-          <p className='whitespace-nowrap capitalize'>
+        <img src={service?.imgUrl} alt={service?.name} className='h-full w-full absolute object-cover object-top' />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-white text-2xl xs:text-2xl sm:text-3xl  lg:text-5xl flex flex-col items-center justify-center gap-4 md:gap-8 z-[1]  backdrop-blur-md px-9 pt-8 pb-6 rounded-t-3xl w-[95%] sm:w-full max-w-3xl lg:max-w-4xl">
+          <p className=' max-w-[95%] w-max sm:whitespace-nowrap capitalize'>
             {service?.name}
           </p>
         </div>

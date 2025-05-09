@@ -20,7 +20,7 @@ const Footer = () => {
                     </li>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/location.svg" alt="sms" />
-                        <a href="https://maps.app.goo.gl/RUu49bTu4gCPSpXf6" target='_blank' className='text-white/90 text-sm'>RZ 243/4C E-17 KH No 54/17, Raj Nagar Part II , Palam Colony New Delhi - 110077</a>
+                        <a href="https://maps.app.goo.gl/38ZTuSg2Thtcibp19" target='_blank' className='text-white/90 text-sm'>RZ 243/4C E-17 KH No 54/17, Raj Nagar Part II , Palam Colony New Delhi - 110077</a>
                     </li>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/copyright.svg" alt="sms" />
@@ -30,12 +30,9 @@ const Footer = () => {
             </div>
             <div style={{ position: 'relative' }} className='hidden sm:block rounded-lg overflow-hidden w-full'>
                 <div style={{ position: 'relative', height: 300, overflow: 'hidden' }} >
-                    <iframe 
-                    style={{ position: 'absolute', top: 0, left: 0, width:'100%', height: '100%', border: 20, }} 
-                    loading="lazy" 
-                    allowFullScreen 
-                    src="https://maps.google.com/maps?q=RZ+243%2F4C+E-17+KH+No+54%2F17%2C+Raj+Nagar+Part+II+%2C+Palam+Colony+New+Delhi+-+110077&z=15&output=embed"
-                    />
+                    
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6324991563774!2d77.08544267531045!3d28.580796275693032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bb80cdf0beb%3A0x2469e4ceca971f27!2sVR%20Dream%20Events%20and%20Entertainments!5e0!3m2!1sen!2sin!4v1746776422743!5m2!1sen!2sin" className='w-full h-full' style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <ul className='absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center pb-6'>
