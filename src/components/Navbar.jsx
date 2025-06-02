@@ -41,8 +41,9 @@ const Navbar = () => {
         ref={navRef}
         className={`h-24 w-full fixed top-0 left-0 z-[1000] flex items-center justify-between px-4 ff-allen  ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none '}`}
       >
-        <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm"></div>
-        <VrLogo className="h-11 w-auto relative z-[1]" />
+        <div className="absolute w-full h-full top-0 left-0 z-0 backdrop-blur-sm overflow-hidden"></div>
+        {/* <VrLogo className="h-11 w-auto relative z-[1]" /> */}
+        <img src="/newlogo.png" alt="VR Logo" className="w-40 relative z-[1] block" />
         {/* Desktop nav links */}
         <ul className="hidden md:flex gap-10 items-center justify-center relative z-[1]">
           <li className="text-black/80">
