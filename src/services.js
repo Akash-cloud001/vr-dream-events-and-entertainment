@@ -70,6 +70,13 @@ export const services = [
     id:'3473ab6b-173e-4f6f-9c8e-0d5e8b09d085'
   },
   {
+    name:'Corporate Gifts',
+    link: '/service/corporate-gifts',
+    imgUrl: '/images/services/corporate-gifts.png',
+    content: "Elevate your brand visibility and client relationships with thoughtfully curated corporate gifts. We offer a wide range of customizable gifting solutions including tech gadgets, eco-friendly items, drinkware, office essentials, apparel, leather accessories, and more. Whether you're welcoming new clients, celebrating milestones, or rewarding employees — our premium, branded gift items are designed to leave a lasting impression. From concept to packaging, we ensure every gift reflects your brand’s identity and values.",
+    id: '3473ab6b-173e-4f6f-9c8e-corporate-gifts'
+  },
+  {
     name:'Decoration',
     link:'/service/decoration',
     imgUrl: '/images/services/decoration.jpg',
