@@ -25,7 +25,7 @@ const Footer = () => {
                     </li>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/copyright.svg" alt="sms" />
-                        <div className='text-white/90 text-sm'>2025 VR Dream Events and Entertainments. All Rights Reserved.</div>
+                        <div className='text-white/90 text-sm'>2025 VR Multiservices. All Rights Reserved.</div>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
         </section>
         <p className='text-center text-xs text-black/70 mt-2'>
-            Website designed & developed by <a href="" className='ff-allen'>Akash Parmar</a>
+            Website designed & developed by <a href="https://akash-codes.in/" target='_blank' className='ff-allen'>Akash Parmar</a>
         </p>
     </footer>
   )
