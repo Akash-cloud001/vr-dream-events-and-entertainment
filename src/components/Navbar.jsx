@@ -136,7 +136,7 @@ const Navbar = () => {
                 </a>
             </li>
             <li>
-                <a href="mailto:contact@vrdreamevents.in" target='_blank'
+                <a href="mailto:contact@vrmultiservices.in" target='_blank'
                   className="block px-5 py-3 bg-white border border-primary text-primary hover:bg-primary hover:text-white duration-200 rounded-lg w-full text-center"
                 >
                   Mail Us

@@ -5,14 +5,14 @@ const Footer = () => {
    
   return (
     <footer className='px-4 sm:px-4 pb-2 mt-20 relative'>
-        <section className="bg-primary w-full h-auto rounded-[20px] px-4 sm:px-8 lg:px-11 flex flex-col md:flex-row gap-8 pt-8 pb-20 relative">
+        <section className="bg-ternary w-full h-auto rounded-[20px] px-4 sm:px-8 lg:px-11 flex flex-col md:flex-row gap-8 pt-8 pb-20 relative">
             <div className='w-full '>
                 {/* <VrLogo fillRect='#92140C' fillText='#FFF8F0' className='h-12 sm:h-14' /> */}
                 <img src="/newlogo.png" alt="VR Logo" className="w-44 relative z-[1] block" />
                 <ul className='mt-11 pl-2 flex flex-col gap-4 sm:gap-5'>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/sms.svg" alt="sms" />
-                        <a href="mailto:contact@vrdreamevents.in" target='_blank' className='text-white/90 text-sm'>contact@vrdreamevents.in</a>
+                        <a href="mailto:contact@vrmultiservices.in" target='_blank' className='text-white/90 text-sm'>contact@vrmultiservices.in</a>
                     </li>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/call.svg" alt="sms" />
@@ -48,7 +48,7 @@ const Footer = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/vr_dream_events?igsh=NDJodzdubnhiYWE3&utm_source=qr" target='_blank'>
+                    <a href="https://www.instagram.com/vr_multiservices?igsh=NDJodzdubnhiYWE3&utm_source=qr" target='_blank'>
                         <img src='/images/socials/instagram.svg' />
                     </a>
                 </li>
