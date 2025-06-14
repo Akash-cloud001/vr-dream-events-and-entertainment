@@ -31,12 +31,14 @@ const Home = () => {
               <div className='hidden xs:block absolute rounded-tl-[30px] rounded-br-lg h-24 w-24 bg-secondary -bottom-8 -left-8 z-0'></div>
             </figure>
 
-            <div className='ff-pop text-base lg:text-xl font-light text-black opacity-80 w-full md:w-[400px] lg:w-[500px]'>
+            <div className='ff-pop text-sm sm:text-base font-light text-black opacity-80 w-full md:w-[400px] lg:w-[500px]'>
               <p>
-                We specialize in creating memorable and successful events that go beyond expectations. As a leading event management company, we combine creativity, precision, and passion to deliver exceptional experiences — whether it's a corporate event, brand activation, exhibition, or roadshow.
+              At our core, we craft unforgettable experiences that leave a lasting impact. As a premier event management company, we bring together innovative ideas, strategic planning, and attention to detail to execute flawless events — from corporate gatherings and exhibitions to brand activations and roadshows.
               </p>
-              <p className='mt-4'>
-                With a strong track record of successful projects and a team of professional event planners, we don’t just plan events — we build relationships, spark emotions, and deliver results that matter.
+              <p className='mt-3'>
+              Our expert team goes beyond event execution by offering end-to-end solutions, including Customized Boards, Stands, and Other Branding Items, designed to elevate your brand presence and engage your audience.</p>
+              <p className='mt-3'>
+              With a proven history of successful events and satisfied clients, we don’t just organize events — we create emotional connections, foster brand loyalty, and deliver measurable results.
               </p>
             </div>
           </article>
@@ -71,7 +73,7 @@ const Home = () => {
           <article className="mt-20 mask-grad ">
             <header className='text-xl  md:text-[40px] ff-allen text-black/80 text-center py-2'>
               Bringing World-Class Events to Every Corner of <br />
-              <span className='text-4xl md:text-6xl text-primary mt-4 sm:mt-4 inline-block'> India</span>
+              <span className='text-4xl md:text-6xl text-ternary mt-4 sm:mt-4 inline-block'> India</span>
             </header>
             <img src="/india.svg" className='h-full w-full mt-8 ' alt="" />
           </article>
