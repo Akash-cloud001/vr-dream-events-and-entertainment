@@ -25,7 +25,7 @@ const Footer = () => {
                     </li>
                     <li className='flex gap-3 items-center justify-start'>
                         <img src="/images/socials/copyright.svg" alt="sms" />
-                        <div className='text-white/90 text-sm'>2025 VR Multiservices. All Rights Reserved.</div>
+                        <div className='text-white/90 text-sm'>2026 VR Multiservices. All Rights Reserved.</div>
                     </li>
                 </ul>
             </div>
